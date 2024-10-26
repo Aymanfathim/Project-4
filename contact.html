@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: url(ricepaper.jpg);
+        background-repeat: repeat;
+        font-family: Portrait, serif;
+        font-family: Pressura Mono, monospace;
+        font-weight: 400;
+        background-color: transparent;
+        padding: 36px;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        align-items: center;
+        text-transform: uppercase;
+    }
+
+    .logo {
+        border: 3px solid black;
+        padding: 2.1rem;
+
+    }
+
+    .logo img {
+        height: 147px;
+        width: 137px;
+        max-width: 600px;
+
+    }
+
+    .title {
+        border: 3px solid black;
+        padding: 37px;
+        border-left: none;
+        border-right: none;
+    }
+
+    .title h6 {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .title h1 {
+        font-size: 5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .title p {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .address {
+        border: 3px solid black;
+        font-weight: 700;
+        font-family: Pressura Mono, monospace;
+        line-height: 1.4;
+        padding: 3rem 0;
+    }
+
+    .location {
+        margin: 0 auto;
+        width: 120px;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    nav {
+        border: 3px solid black;
+        border-top: none;
+        padding: 1rem 0;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+        list-style: none;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 1em;
+    }
+
+    nav ul li a:hover {
+        background-color: #294c8f;
+        color: white;
+    }
+
+    .active {
+        background-color: #294c8f;
+        color: white;
+    }
+
+    .title-hover:hover {
+        color: #294c8f;
+        transition: 1s;
+    }
+
+    img {
+        filter: grayscale(100%);
+        transition: filter 1s ease;
+    }
+
+    img:hover {
+        filter: grayscale(0%);
+    }
+
+    /* main  */
+    .b-location {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: 3px solid;
+        border-top: none;
+    }
+
+    .b-location .map1:hover {
+        border-right: 2px solid black;
+        color: #294c8f;
+        transition: 2s;
+    }
+
+    .b-location .map2:hover {
+        color: #294c8f;
+        transition: 2s;
+    }
+
+    .b-location h2 {
+        font-size: 4.7rem;
+        line-height: 1;
+        font-family: Portrait, serif;
+        font-weight: 700;
+    }
+
+    span {
+        font-size: 18px;
+    }
+
+    .map1 {
+        border-right: 3px solid;
+        padding: 30px;
+    }
+
+    .map-sub-heading {
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+
+    .map2 {
+        padding: 30px;
+    }
+
+    /* telephone */
+    .special-order {
+        font-size: 4.5em;
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-family: Portrait, serif;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .telephone-aside {
+        border: 3px solid;
+        padding: 30px;
+        border-top: none;
+    }
+
+    aside.telephone-aside {
+        border: 3px solid;
+        border-top: none;
+        padding: 30px;
+    }
+
+    .telephone-aside h3 {
+        font-size: 4.5em;
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-family: Portrait, serif;
+        text-align: center;
+    }
+
+    .telephone {
+        width: 285px;
+        height: 200px;
+    }
+
+    .lines {
+        display: flex;
+        gap: 3em;
+    }
+
+    .line {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        line-height: 25px;
+        gap: 10px;
+        margin-top: 1em;
+    }
+
+    .special-border {
+        padding: 30px;
+        height: 100%;
+        border: 3px solid;
+        display: flex;
+        border-image: url(sidebar-border.svg) 30 round;
+    }
+
+    body h2:hover {
+        color: #294c8f;
+        transition: 1s;
+    }
+
+    h3:hover {
+        color: #294c8f;
+        transition: 1s;
+    }
+
+    .special-border:hover {
+        color: #294c8f;
+        transition: 1s;
+    }
+
+    /* footer */
+    footer {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+    }
+
+    .sec1 {
+        padding: 19px 20px;
+        border: 3px solid;
+        border-top: none;
+    }
+
+    .sec2 {
+        padding: 19px 20px;
+        border-bottom: 3px solid;
+    }
+
+    .sec3 {
+        border: 3px solid;
+        border-top: none;
+    }
+
+    /* Media Queries */
+
+    /* 360px - 575px */
+    @media (min-width:300px) and (max-width: 575px) {
+        body {
+            padding: 5px;
+        }
+
+        header {
+            display: block;
+        }
+
+        .logo {
+            display: none;
+        }
+
+        .title {
+            border: 3px solid;
+            padding: 1em;
+        }
+
+        .address {
+            display: none;
+        }
+
+        .b-location {
+            grid-template-columns: 1fr;
+        }
+
+        .b-location h2 {
+            font-size: 42px;
+        }
+
+        .telephone-aside {
+            padding: 7px;
+        }
+
+        .title p {
+            font-size: 21px;
+        }
+
+        .title h1 {
+            font-size: 58px;
+        }
+
+        .title h6 {
+            font-size: 14px;
+        }
+
+        .b-location {
+            grid-template-columns: 1fr;
+        }
+
+        .special-border {
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .special-order {
+            font-size: 2.5em;
+        }
+
+        .telephone-aside h3 {
+            font-size: 2.5em;
+        }
+
+        .b-location h2 {
+            font-size: 3rem;
+        }
+
+        .map1 {
+            border: none;
+            padding: 10px;
+        }
+
+        .map2 {
+            padding: 10px;
+            border-top: 3px solid;
+        }
+
+        footer {
+            display: block;
+        }
+
+        .sec2 {
+            border: 3px solid;
+            border-top: none;
+        }
+
+        .sec3 {
+            display: none;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    /* 576px - 768px */
+    @media (min-width: 576px) and (max-width: 768px) {
+        body {
+            padding: 8px;
+        }
+
+        header {
+            display: block;
+        }
+
+        .logo {
+            display: none;
+        }
+
+        .title {
+            border: 3px solid;
+            padding: 1em;
+        }
+
+        .address {
+            display: none;
+        }
+
+        .title p {
+            font-size: 21px;
+        }
+
+        .title h1 {
+            font-size: 58px;
+        }
+
+        .title h6 {
+            font-size: 14px;
+        }
+
+        .map1 {
+            border: none;
+            border-bottom: 3px solid;
+        }
+
+        .b-location {
+            grid-template-columns: 1fr;
+        }
+
+        .telephone-aside h3 {
+            font-size: 2.5em;
+        }
+
+        .special-border {
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .special-order {
+            font-size: 2.5em;
+        }
+
+        .telephone-aside {
+            padding: 5px;
+        }
+
+        .lines {
+            margin: 0 auto;
+            display: block;
+        }
+
+        footer {
+            display: block;
+        }
+
+        .sec1 {
+            text-align: center;
+        }
+
+        .sec2 {
+            border: 3px solid;
+            border-top: none;
+            text-align: center;
+        }
+
+        .sec3 {
+            display: none;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    /* 769px - 991px */
+    @media (min-width: 769px) and (max-width: 990px) {
+        .title h1 {
+            font-size: 53px;
+        }
+
+        .logo {
+            padding: 34px;
+        }
+
+        .logo img {
+            width: 88px;
+            height: 84px;
+        }
+
+        .title {
+            padding: 23px;
+        }
+
+        .address {
+            padding: 19px;
+        }
+
+        .b-location h2 {
+            font-size: 47px;
+        }
+
+        .special-border {
+            padding: 10px;
+        }
+
+        .special-order {
+            font-size: 1.7rem;
+            padding: 15px;
+        }
+        .telephone-aside h3 {
+            font-size: 2em;
+        }
+        .telephone{
+            width: 156px;
+            height: 139px;
+        }
+    }
+
+    /* 991px - 1200px */
+    @media (min-width: 991px) and (max-width: 1200px) {
+        .telephone-aside h3 {
+            font-size: 3em;
+        }
+        .special-order {
+            font-size: 3em;
+        }
+        .b-location h2 {
+            font-size: 4rem;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.svg" alt="">
+        </div>
+        <div class="title">
+            <div class="title-hover">
+                <h6>WEDNESDAY , JANUARY 1 ,2025</h6>
+                <h1>SEA HARVEST</h1>
+                <p>FRESH SEAFOOD MARKET</p>
+            </div>
+        </div>
+        <div class="address">
+            <p class="location">BELCONNEN MARKET <br></p>
+            <p class="location">FYSHWICK MARKET</p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="product.html">PRODUCT</a></li>
+            <li><a href="contact.html" class="active">CONTACT</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="b-location">
+            <div class="map1">
+                <h2>BELCONNEN FRESH FOOD MARKETS</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.716199905229!2d-74.00597248459863!3d40.71277537933037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x123456789abcdef!2sFashion%20Store!5e0!3m2!1sen!2sus!4v1605804921464!5m2!1sen!2sus"
+                    width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+
+                <p class="map-sub-heading">15 Market Street , Belconnen</p>
+                <span class="hours">
+                    OPENING HOURS : <br>
+                    Mon CLOSED <br>
+                    Tue CLOSED <br>
+                    Wed 8:00AM - 6:00PM <br>
+                    Wed 8:00AM - 6:00PM <br>
+                    Thu 8:00AM - 6:00PM <br>
+                    Fri 8:00AM - 6:00PM <br>
+                    Sat 8:00AM - 6:00PM<br>
+                    Sun 8:00AM - 6:00PM <br>
+                </span>
+            </div>
+            <div class="map2">
+                <h2>FYSHWICK FRESH FOOD MARKETS</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.716199905229!2d-74.00597248459863!3d40.71277537933037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x123456789abcdef!2sFashion%20Store!5e0!3m2!1sen!2sus!4v1605804921464!5m2!1sen!2sus"
+                    width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+                <p class="map-sub-heading">12 Dalby Street, Fyshwick , Canberra</p>
+                <span class="hours">
+                    OPENING HOURS : <br>
+                    Mon CLOSED <br>
+                    Tue CLOSED <br>
+                    Wed 8:00AM - 5:30PM <br>
+                    Thu 8:00AM - 5:30PM <br>
+                    Fri 8:00AM - 5:30PM <br>
+                    Sat 8:00AM - 5:30PM <br>
+                    Sun 8:00AM - 5:30PM <br>
+                </span>
+            </div>
+        </div>
+
+        <div class="telephone-aside">
+            <div class="special-border">
+                <h2 class="special-order">HAVE A <br> SPECIAL <br>REQUEST?</h2>
+                <img src="orderimg.png" class="telephone">
+                <div class="row">
+                    <h3>GET IN TOUCH</h3>
+                    <div class="lines">
+                        <div class="line">
+                            <h4>FYSHWICK</h4>
+                            <p>02 6239 4351</p>
+                        </div>
+                        <div class="line">
+                            <h4>WHOLESALE</h4>
+                            <p>0436 043 634</p>
+                        </div>
+                        <div class="line">
+                            <h4>EMAIL US</h4>
+                            <p>CLICK HERE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="sec1"> SEA HARVEST AUSTRALIA, FRESH SEAFOOD MARKET</p>
+        <p class="sec2"> Seaharvest Depot / Seaharvest Belconnen Markets </p>
+        <p class="sec3"></p>
+    </footer>
+</body>
+
+</html>

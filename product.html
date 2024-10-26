@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<style>
+    /* header */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: url(ricepaper.jpg);
+        background-repeat: repeat;
+        font-family: Portrait, serif;
+        font-family: Pressura Mono, monospace;
+        font-weight: 400;
+        background-color: transparent;
+        padding: 36px;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        align-items: center;
+        text-transform: uppercase;
+    }
+
+    .logo {
+        border: 3px solid black;
+        padding: 2.1rem;
+
+    }
+
+    .logo img {
+        height: 147px;
+        width: 137px;
+        max-width: 600px;
+
+    }
+
+    .title {
+        border: 3px solid black;
+        padding: 37px;
+        border-left: none;
+        border-right: none;
+    }
+
+    .title h6 {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .title h1 {
+        font-size: 5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .title p {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .address {
+        border: 3px solid black;
+        font-weight: 700;
+        font-family: Pressura Mono, monospace;
+        line-height: 1.4;
+        padding: 3rem 0;
+    }
+
+    .location {
+        margin: 0 auto;
+        width: 120px;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    nav {
+        border: 3px solid black;
+        border-top: none;
+        padding: 1rem 0;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+        list-style: none;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 1em;
+    }
+
+    nav ul li a:hover {
+        background-color: #294c8f;
+        color: white;
+    }
+
+    .active {
+        background-color: #294c8f;
+        color: white;
+    }
+
+    .title-hover:hover {
+        color: #294c8f;
+        transition: 1s;
+    }
+
+    img {
+        filter: grayscale(100%);
+        transition: filter 1s ease;
+    }
+
+    img:hover {
+        filter: grayscale(0%);
+    }
+
+    /* div1 */
+    main h2 {
+        font-size: 4rem;
+        line-height: 1.2;
+        font-family: Portrait, serif;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    main p {
+        text-align: center;
+    }
+
+    .divider1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main img {
+        width: 338px;
+        height: 270px;
+    }
+
+    .divider1 image {
+        width: 100%;
+    }
+
+    .fish {
+        display: grid;
+        gap: 1em;
+        border: 3px solid;
+        border-top: none;
+    }
+
+
+    .fish img {
+        width: 90%;
+    }
+
+    .fillet {
+        display: grid;
+        gap: 1em;
+        border-right: 3px solid;
+        border-bottom: 3px solid;
+    }
+
+
+    .fillet img {
+        width: 90%;
+    }
+
+    /* div2 */
+    .divider2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .prawn {
+        display: grid;
+        /* gap: 1em; */
+        border-bottom: 3px solid;
+    }
+
+    .oyster {
+        display: grid;
+        gap: 1em;
+        border: 3px solid;
+        border-top: none;
+    }
+
+    /* telephone */
+    aside.telephone-aside {
+        border: 3px solid;
+        border-top: none;
+        padding: 30px;
+        display: flex;
+        gap: 30px;
+    }
+
+    .telephone-aside h3 {
+        font-size: 3em;
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-family: Portrait, serif;
+    }
+
+    .telephone {
+        width: 27%;
+        height: 230px;
+
+    }
+
+    .line {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        line-height: 25px;
+        gap: 10px;
+        margin-top: 4em;
+    }
+
+    .special-border {
+        padding: 30px;
+        height: 100%;
+        border: 3px solid;
+        border-image: url(sidebar-border.svg) 30 round;
+    }
+
+    img {
+        margin: 0 auto;
+    }
+
+    body h2:hover {
+        color: #294c8f;
+        transition: 1s;
+    }
+
+    h3:hover {
+        color: #294c8f;
+        transition: 1s;
+    }
+
+    .special-border:hover {
+        color: #294c8f;
+        transition: 1s;
+    }
+
+    /* footer */
+    footer {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+    }
+
+    .sec1 {
+        padding: 19px 20px;
+        border: 3px solid;
+        border-top: none;
+    }
+
+    .sec2 {
+        padding: 19px 20px;
+        border-bottom: 3px solid;
+    }
+
+    .sec3 {
+        border: 3px solid;
+        border-top: none;
+    }
+
+    /* Media Queries */
+
+    /* 360px - 575px */
+    @media (min-width:300px) and (max-width: 575px) {
+        body {
+            padding: 5px;
+        }
+
+        header {
+            display: block;
+        }
+
+        .logo {
+            display: none;
+        }
+
+        .title {
+            border: 3px solid;
+            padding: 1em;
+        }
+
+        .address {
+            display: none;
+        }
+
+        .title p {
+            font-size: 21px;
+        }
+
+        .title h1 {
+            font-size: 58px;
+        }
+
+        .title h6 {
+            font-size: 14px;
+        }
+
+        .divider1 {
+            display: block;
+        }
+
+        .divider2 {
+            display: block;
+        }
+
+        main h2 {
+            font-size: 3rem;
+        }
+
+        .telephone {
+            width: 70%;
+            height: 235px;
+            margin-top: 2em;
+        }
+
+        .telephone-aside h3 {
+            font-size: 2em;
+            margin: 0 auto;
+        }
+
+        .fillet {
+            border: 3px solid;
+            border-top: none;
+        }
+
+        .prawn {
+            border: 3px solid;
+            border-top: none;
+        }
+
+        aside.telephone-aside {
+            padding: 10px;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .line h4 {
+            font-size: 18px;
+        }
+
+        footer {
+            display: block;
+        }
+
+        .sec2 {
+            border: 3px solid;
+            border-top: none;
+        }
+
+        .sec3 {
+            display: none;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+
+    }
+
+    /* 576px - 768px */
+    @media (min-width: 576px) and (max-width: 768px) {
+        body {
+            padding: 8px;
+        }
+
+        header {
+            display: block;
+        }
+
+        .logo {
+            display: none;
+        }
+
+        .title {
+            border: 3px solid;
+            padding: 1em;
+        }
+
+        .address {
+            display: none;
+        }
+
+        .title p {
+            font-size: 21px;
+        }
+
+        .title h1 {
+            font-size: 58px;
+        }
+
+        .title h6 {
+            font-size: 14px;
+        }
+
+        .divider1 {
+            display: block;
+        }
+
+        .divider1 div {
+            padding: 1.5rem;
+        }
+
+        .divider2 {
+            display: block;
+        }
+
+        .divider2 div {
+            padding: 1.5rem;
+        }
+
+        main h2 {
+            font-size: 3rem;
+        }
+
+        main img {
+            height: 290px;
+        }
+
+        .fillet {
+            border: 3px solid;
+            border-top: none;
+        }
+
+        .prawn {
+            border: 3px solid;
+            border-top: none;
+        }
+
+        aside.telephone-aside {
+            padding: 10px;
+        }
+
+        aside.telephone-aside h3 {
+            text-align: center;
+        }
+
+        .telephone {
+            width: 340px;
+            height: 295px;
+            display: block;
+            margin: 0 auto;
+        }
+        aside.telephone-aside {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .line h4 {
+            font-size: 18px;
+        }
+
+        footer {
+            display: block;
+        }
+
+        .sec1 {
+            text-align: center;
+        }
+
+        .sec2 {
+            border: 3px solid;
+            border-top: none;
+            text-align: center;
+        }
+
+        .sec3 {
+            display: none;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    /* 769px - 991px */
+    @media (min-width: 769px) and (max-width: 990px) {
+        .title h1 {
+            font-size: 53px;
+        }
+
+        .logo {
+            padding: 34px;
+        }
+
+        .logo img {
+            width: 88px;
+            height: 84px;
+        }
+
+        .title {
+            padding: 23px;
+        }
+
+        .address {
+            padding: 19px;
+        }
+
+        .divider1 h2 {
+            font-size: 48px;
+        }
+
+        .divider2 h2 {
+            font-size: 41px;
+        }
+
+        .divider2 img {
+            width: 216px;
+            height: 173px;
+        }
+
+        .telephone {
+            display: block;
+            margin: 0 auto;
+            width: 155px;
+            height: 138px;
+        }
+
+        .telephone-aside h3 {
+            text-align: center;
+        }
+
+        aside.telephone-aside {
+            padding: 15px;
+        }
+    }
+
+    /* 991px - 1200px */
+    @media (min-width: 991px) and (max-width: 1200px) {
+        .divider1 h2 {
+            font-size: 67px;
+        }
+
+        .divider2 h2 {
+            font-size: 46px;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.svg" alt="">
+        </div>
+        <div class="title">
+            <div class="title-hover">
+                <h6>WEDNESDAY , JANUARY 1 ,2025</h6>
+                <h1>SEA HARVEST</h1>
+                <p>FRESH SEAFOOD MARKET</p>
+            </div>
+        </div>
+        <div class="address">
+            <p class="location">BELCONNEN MARKET <br></p>
+            <p class="location">FYSHWICK MARKET</p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="product.html" class="active">PRODUCT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="divider1">
+            <div class="fish">
+                <h2>WHOLE FISH</h2>
+                <P>FISH MONGER'S CHOICE</P>
+                <img src="barra-blue.png" alt="fish">
+            </div>
+            <div class="fillet">
+                <h2>FILLET FISH</h2>
+                <p>THE FRESHEST AVAILABLE</p>
+                <img src="salmon-fillet-blue.png" alt="salmon">
+            </div>
+        </div>
+        <div class="divider2">
+            <div class="fish">
+                <h2>SHELLFISH</h2>
+                <P>FOR THE CONNOISEUR</P>
+                <img src="crab.png" alt="crab">
+            </div>
+            <div class="prawn">
+                <h2>PRAWNS</h2>
+                <p>THE HOLIDAY FAVOURITE</p>
+                <img src="prawn-blue.png" alt="prawn">
+            </div>
+            <div class="oyster">
+                <h2>OYSTER & MOLLUSCS</h2>
+                <p>TASTE THE SEA</p>
+                <img src="oyster-squid-blue.png" alt="oyster">
+            </div>
+        </div>
+    </main>
+    <aside class="telephone-aside">
+        <h3>GET IN TOUCH</h3>
+        <img src="phone.png" class="telephone">
+        <div class="line">
+            <h4>FYSHWICK</h4>
+            <p>02 6239 4351</p>
+        </div>
+        <div class="line">
+            <h4>WHOLESALE</h4>
+            <p>0436 043 634</p>
+        </div>
+        <div class="line">
+            <h4>EMAIL US</h4>
+            <p>CLICK HERE</p>
+        </div>
+    </aside>
+    <footer>
+        <p class="sec1"> SEA HARVEST AUSTRALIA, FRESH SEAFOOD MARKET</p>
+        <p class="sec2"> Seaharvest Depot / Seaharvest Belconnen Markets </p>
+        <p class="sec3"></p>
+    </footer>
+</body>
+
+</html>
