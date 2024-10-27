@@ -10,7 +10,6 @@ body {
     font-family: Portrait, serif;
     font-family: Pressura Mono, monospace;
     font-weight: 400;
-    /* background-color: rgba(38, 73, 141, 0); */
     background-color: transparent;
     padding: 36px;
 }
@@ -20,23 +19,17 @@ header {
     grid-template-columns: 1fr 4fr 1fr;
     align-items: center;
     text-transform: uppercase;
-
-    /* padding: 20px; */
-    /* font-family: Pressura Mono, monospace; */
-    /* border: 3px solid black; */
 }
 
 .logo {
     border: 3px solid black;
     padding: 2.1rem;
-
 }
 
 .logo img {
     height: 147px;
     width: 137px;
     max-width: 600px;
-
 }
 
 .title {
@@ -85,16 +78,13 @@ nav {
 
 nav ul {
     display: flex;
-    /* height: 3rem; */
     justify-content: space-around;
     align-items: center;
-
 }
 
 nav ul li {
     margin-left: 20px;
     list-style: none;
-
 }
 
 nav ul li a {
@@ -397,6 +387,10 @@ footer {
     .find-us{
         padding: 10px;
     }
+.find-us img{
+    margin: 0 auto;
+    display: block;
+}
     .major h2 {
 font-size: 2.1rem;
     }
