@@ -372,42 +372,55 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
     }
-    .species{
+
+    .species {
         border-left: 3px solid;
     }
-    .major{
-        padding: 10px ;
-    }
-    .telephone-aside{
+
+    .major {
         padding: 10px;
     }
-    .special-border{
+
+    .telephone-aside {
+        padding: 10px;
+    }
+
+    .special-border {
         padding: 15px;
     }
-    .find-us{
+
+    .find-us {
         padding: 10px;
     }
-.find-us img{
-    margin: 0 auto;
-    display: block;
-}
-    .major h2 {
-font-size: 2.1rem;
+
+    .find-us img {
+        margin: 0 auto;
+        display: block;
     }
+
+    .major h2 {
+        font-size: 2.1rem;
+    }
+
     .image-grid {
-        padding: 2px;}
+        padding: 2px;
+    }
+
     .strange1 {
         width: 71%;
         margin: 0 auto;
         display: block;
         padding-top: 1em;
     }
+
     .telephone-aside {
         border-left: 3px solid;
     }
-    .find-us{
+
+    .find-us {
         border-left: 3px solid;
     }
+
     /* aside{
         border-right: 3px solid;
     } */

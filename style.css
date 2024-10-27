@@ -138,9 +138,14 @@ img:hover {
 .banner {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     border: 3px solid;
     border-top: none;
+}
+
+img {
+    margin: 0 auto;
+    display: block;
 }
 
 .left-content {
@@ -182,8 +187,7 @@ img:hover {
     font-weight: 700;
     margin-bottom: 10px;
     font-family: Portrait, serif;
-    position: relative;
-    transform: translateX(0.8em);
+    text-align: center;
 }
 
 .sidebar h4 {
@@ -227,6 +231,7 @@ aside.telephone-aside {
     font-size: 3em;
     font-weight: 700;
     margin-bottom: 10px;
+    text-align: center;
     font-family: Portrait, serif;
 }
 
@@ -422,10 +427,7 @@ footer {
 
     .sidebar {
         padding: 20px;
-    }
-
-    aside.telephone-aside {
-        display: none;
+        border-top: 3px solid;
     }
 
     .telephone {
@@ -456,7 +458,8 @@ footer {
     }
 
     .main3 img {
-        width: 330px;
+        width: 300px;
+        object-fit: contain;
     }
 
     .webnme {
@@ -473,10 +476,6 @@ footer {
 
     .component img {
         transform: translateY(0rem);
-    }
-
-    .special-border {
-        display: none;
     }
 
     footer {
@@ -631,8 +630,11 @@ footer {
     .box {
         padding: 10px;
     }
+
     .special-border {
-        padding: 12px;}
+        padding: 12px;
+    }
+
     .telephone-aside h3 {
         font-size: 1.5em;
     }
@@ -731,3 +733,9 @@ footer {
 
 /* 991px - 1200px */
 @media (min-width: 991px) and (max-width: 1200px) {}
+
+@media (min-width: 1920px) {
+    .webnme2 h2 {
+        transform: translateY(1rem);
+    }
+}
