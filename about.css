@@ -381,9 +381,11 @@ footer {
     .major {
         padding: 10px;
     }
+
     .major p {
         font-size: 20px;
     }
+
     .telephone-aside {
         padding: 10px;
     }
@@ -395,12 +397,15 @@ footer {
     .find-us {
         padding: 10px;
     }
+
     .find-us h4 {
         font-size: 27px;
     }
-    .find-us p{
+
+    .find-us p {
         font-size: 20px;
     }
+
     .find-us img {
         margin: 0 auto;
         display: block;
@@ -432,7 +437,7 @@ footer {
     /* aside{
         border-right: 3px solid;
     } */
-    .line{
+    .line {
         font-size: 27px;
     }
 
@@ -603,12 +608,15 @@ footer {
         font-size: 46px;
         line-height: 1;
     }
+
     .major p {
         font-size: 26px;
     }
-    .line p{
+
+    .line p {
         font-size: 22px;
     }
+
     .strange1 {
         width: 65%;
         margin: 0 auto;
@@ -630,9 +638,11 @@ footer {
         text-align: center;
         transform: translateX(0em);
     }
+
     .points ul li {
         font-size: 26px;
     }
+
     .telephone-aside {
         padding: 5px
     }
@@ -644,9 +654,11 @@ footer {
     .telephone-aside h3 {
         font-size: 2em;
     }
+
     h4 {
         font-size: 27px;
     }
+
     .find-us p {
         font-size: 20px;
     }
