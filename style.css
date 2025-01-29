@@ -406,7 +406,9 @@ footer {
     .banner {
         grid-template-columns: 1fr;
     }
-
+    .banner-written-content {
+        font-size: 20px;
+    }
     .main2 {
         grid-template-columns: 1fr;
     }
@@ -429,6 +431,12 @@ footer {
         padding: 20px;
         border-top: 3px solid;
     }
+    .sidebar h4 {
+        font-size: 26px;
+    }
+    .sidebar p {
+        font-size: 22px;
+    }
 
     .telephone {
         width: 300px;
@@ -442,6 +450,12 @@ footer {
     section.tall-fish {
         border-left: 3px solid;
     }
+    
+.tall-fish-w-content {
+    font-size: 27px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+}
 
     section.fisherman {
         border-right: 3px solid;
@@ -455,13 +469,17 @@ footer {
 
     .main3 p {
         text-align: center;
+        line-height: 26px;
+        font-size: 28px;
     }
 
     .main3 img {
         width: 300px;
         object-fit: contain;
     }
-
+.line{
+    font-size: 27px;
+}
     .webnme {
         display: none;
     }
@@ -471,7 +489,7 @@ footer {
     }
 
     .component {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .component img {
@@ -480,6 +498,7 @@ footer {
 
     footer {
         display: block;
+        font-size: 21px;
     }
 
     .sec2 {
@@ -626,7 +645,9 @@ footer {
     body {
         padding: 15px;
     }
-
+    .banner-written-content {
+        font-size: 25px;
+    }
     .box {
         padding: 10px;
     }
@@ -634,10 +655,14 @@ footer {
     .special-border {
         padding: 12px;
     }
-
+    .tall-fish-w-content {
+        font-size: 19px;
+    }
     .telephone-aside h3 {
         font-size: 1.5em;
+        margin-bottom: 3em;
     }
+
 
     aside.telephone-aside {
         padding: 10px;
@@ -649,14 +674,18 @@ footer {
 
     section.box {
         padding: 5px;
+        display: grid;
+        gap: 2em;
     }
 
     section.fisherman {
         padding: 6px;
+        display: grid;
     }
 
     section.crab {
         padding: 5px;
+        display: grid;
     }
 
     .title h1 {
@@ -692,6 +721,9 @@ footer {
     .main3 h2 {
         font-size: 42px;
     }
+    .main3-w-content {
+        font-size: 19px;
+    }
 
     .sidebar img {
         width: 169px;
@@ -701,7 +733,18 @@ footer {
     .sidebar {
         padding: 10px;
     }
-
+    .sidebar h4 {
+        font-size: 27px;
+    }
+    .sidebar p{
+        font-size: 23px;
+    }
+    .line h4{
+        font-size: 27px;
+    }
+    .line p{
+        font-size: 23px;
+    }
     .left-content {
         padding: 10px;
     }
@@ -727,6 +770,12 @@ footer {
         width: 177px;
         height: 225px;
         transform: translateY(-12rem);
+    }
+    .sec1{
+        font-size:19px ;
+    }
+    .sec2{
+        font-size:19px ;
     }
 
 }
